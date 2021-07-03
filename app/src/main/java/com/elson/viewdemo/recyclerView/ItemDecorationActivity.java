@@ -8,6 +8,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.elson.viewdemo.R;
+import com.elson.viewdemo.recyclerView.itemdecoration.LinearItemDecoration;
 import com.elson.viewdemo.touch.TouchActivity;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class ItemDecorationActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         PageAdapter pageAdapter = new PageAdapter(pageData);
         recyclerView.setAdapter(pageAdapter);
+        recyclerView.addItemDecoration(new LinearItemDecoration());
         pageAdapter.notifyDataSetChanged();
     }
 
@@ -55,7 +57,7 @@ public class ItemDecorationActivity extends AppCompatActivity {
             textView.setBackgroundColor(Color.WHITE);
 
             FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 50 * 3);
-            layoutParams.setMargins(0, 20, 0, 0);
+//            layoutParams.setMargins(0, 20, 0, 0);
             textView.setLayoutParams(layoutParams);
             return new SimpleViewHolder(textView);
         }
