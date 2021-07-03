@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.elson.viewdemo.touch.view.ScrollerLinearLayout
+        android:id="@+id/scrollToLl"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/scrollToTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00ffff"
+            android:gravity="center"
+            android:text="scrollTo" />
+
+        <TextView
+            android:id="@+id/resetScrollToTv"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:text="resetScrollTo" />
+    </com.elson.viewdemo.touch.view.ScrollerLinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.elson.viewdemo.touch.view.ViewDragLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:text="红色"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#00FF00"
+        android:gravity="center"
+        android:text="绿色"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:background="#0000FF"
+        android:gravity="center"
+        android:text="蓝色"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+</com.elson.viewdemo.touch.view.ViewDragLinearLayout>

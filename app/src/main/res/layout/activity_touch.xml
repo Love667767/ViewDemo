@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.elson.viewdemo.touch.view.LinearLayoutOuter xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.elson.viewdemo.touch.view.LinearLayoutInner
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#ffff00"
+        android:orientation="vertical">
+
+        <com.elson.viewdemo.touch.view.CustomTextView
+            android:id="@+id/touchTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="30dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="Touch"
+            android:textSize="25sp" />
+    </com.elson.viewdemo.touch.view.LinearLayoutInner>
+
+</com.elson.viewdemo.touch.view.LinearLayoutOuter>
