@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import com.elson.viewdemo.R
-import kotlinx.android.synthetic.main.activity_suspended_layout.*
+import kotlinx.android.synthetic.main.activity_nested_suspended.*
 import java.util.*
 
 /**
  * @author elson
  * @date 2021/7/5
  * @Desc
- * @see <a href=https://github.com/RubiTree/NestedScrollingHistory/blob/master/app/src/main/res/layout/activity_suspended_layout.xml>Suspend</a>
+ * @see <a href=https://github.com/RubiTree/NestedScrollingHistory/blob/master/app/src/main/res/layout/activity_nested_suspended.xml>Suspend</a>
  */
 class SuspendedLayoutActivity : AppCompatActivity() {
 
@@ -20,7 +20,7 @@ class SuspendedLayoutActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_suspended_layout)
+        setContentView(R.layout.activity_nested_suspended)
 
         initFragments()
         initScrollableLayout()

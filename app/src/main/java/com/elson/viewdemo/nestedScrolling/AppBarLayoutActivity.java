@@ -25,7 +25,7 @@ public class AppBarLayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_appbarlayout);
+        setContentView(R.layout.activity_nested_appbar);
 
         final ImageView backgroundIv = findViewById(R.id.backgroundIv);
         AppBarLayout appBarLayout = findViewById(R.id.appbarLayout);
@@ -44,7 +44,7 @@ public class AppBarLayoutActivity extends AppCompatActivity {
                 float percent = (float) ((mHeight + verticalOffset) * 1.0 / mHeight);
                 ILog.d(TAG, "percent=" + percent);
                 backgroundIv.setPivotX(mWidth / 2);
-                backgroundIv.setPivotY(mHeight / 2);
+                backgroundIv.setPivotY(mHeight * 3 / 4);
                 backgroundIv.setScaleX(percent);
                 backgroundIv.setScaleY(percent);
             }
