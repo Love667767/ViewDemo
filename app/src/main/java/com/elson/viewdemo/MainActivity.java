@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.elson.viewdemo.nestedScrolling.AppBarLayoutActivity;
+import com.elson.viewdemo.nestedScrolling.SuspendedLayoutActivity;
 import com.elson.viewdemo.recyclerView.ItemDecorationActivity;
 import com.elson.viewdemo.touch.DrawerActivity;
 import com.elson.viewdemo.touch.ScrollerActivity;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         pageData.add(new PageData("DrawerLayout", DrawerActivity.class));
         pageData.add(new PageData("Recycler ItemDecoration", ItemDecorationActivity.class));
         pageData.add(new PageData("AppBarLayout", AppBarLayoutActivity.class));
+        pageData.add(new PageData("SuspendedLayout", SuspendedLayoutActivity.class));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

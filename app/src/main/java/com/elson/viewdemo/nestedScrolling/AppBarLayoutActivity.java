@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 import com.elson.viewdemo.ILog;
 import com.elson.viewdemo.R;
+import com.elson.viewdemo.nestedScrolling.fragment.TabFragment;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 

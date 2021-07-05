@@ -26,6 +26,7 @@
         <activity android:name=".recyclerView.ItemDecorationActivity" android:screenOrientation="portrait"/>
 
         <activity android:name=".nestedScrolling.AppBarLayoutActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".nestedScrolling.SuspendedLayoutActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

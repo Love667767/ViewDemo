@@ -1,4 +1,4 @@
-package com.elson.viewdemo.nestedScrolling;
+package com.elson.viewdemo.nestedScrolling.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
