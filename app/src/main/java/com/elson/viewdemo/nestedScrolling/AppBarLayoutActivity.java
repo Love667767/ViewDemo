@@ -5,15 +5,23 @@ import android.widget.ImageView;
 
 import com.elson.viewdemo.ILog;
 import com.elson.viewdemo.R;
+import com.elson.viewdemo.nestedScrolling.adapter.HorizontalAdapter;
 import com.elson.viewdemo.nestedScrolling.fragment.TabFragment;
+import com.elson.viewdemo.recyclerView.adapter.PageAdapter;
+import com.elson.viewdemo.recyclerView.data.PageData;
+import com.elson.viewdemo.touch.TouchActivity;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 public class AppBarLayoutActivity extends AppCompatActivity {
@@ -49,6 +57,30 @@ public class AppBarLayoutActivity extends AppCompatActivity {
                 backgroundIv.setScaleY(percent);
             }
         });
+
+        RecyclerView cardRecyclerView = findViewById(R.id.cardRecyclerView1);
+        cardRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        cardRecyclerView.setNestedScrollingEnabled(false);
+        ArrayList<PageData> pageData = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            pageData.add(new PageData( "Card ：" + i, TouchActivity.class));
+        }
+        PageAdapter pageAdapter = new PageAdapter(pageData);
+        cardRecyclerView.setAdapter(pageAdapter);
+        pageAdapter.notifyDataSetChanged();
+
+
+        RecyclerView cardRecyclerView2 = findViewById(R.id.cardRecyclerView2);
+        cardRecyclerView2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        cardRecyclerView2.setNestedScrollingEnabled(false);
+        ArrayList<PageData> pageData2 = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            pageData2.add(new PageData( "Card ：" + i, TouchActivity.class));
+        }
+        HorizontalAdapter pageAdapter2 = new HorizontalAdapter(pageData2);
+        cardRecyclerView2.setAdapter(pageAdapter2);
+        pageAdapter2.notifyDataSetChanged();
+
 
         final String[] titles = {"Tab1", "Tab2"};
         final Fragment[] fragments = {TabFragment.newInstance(titles[0]), TabFragment.newInstance(titles[1])};

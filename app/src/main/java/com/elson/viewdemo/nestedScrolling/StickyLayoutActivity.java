@@ -30,6 +30,7 @@ public class StickyLayoutActivity extends AppCompatActivity {
                 TabFragment.newInstance(titles[0]),
                 TabFragment.newInstance(titles[1])
         };
+
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         ViewPager viewPager = findViewById(R.id.viewPager);

@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.elson.viewdemo.nestedScrolling.AppBarLayoutActivity;
+import com.elson.viewdemo.nestedScrolling.RecyclerViewBottomBehaviorActivity;
 import com.elson.viewdemo.nestedScrolling.StickyLayoutActivity;
 import com.elson.viewdemo.nestedScrolling.SuspendedLayoutActivity;
 import com.elson.viewdemo.recyclerView.ItemDecorationActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         pageData.add(new PageData("Nested AppBarLayout", AppBarLayoutActivity.class));
         pageData.add(new PageData("Nested SuspendedLayout", SuspendedLayoutActivity.class));
         pageData.add(new PageData("Nested Sticky", StickyLayoutActivity.class));
+        pageData.add(new PageData("Nested BottomBehavior", RecyclerViewBottomBehaviorActivity.class));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

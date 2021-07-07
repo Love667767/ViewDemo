@@ -2,13 +2,8 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:id="@+id/coordinator"
     android:layout_height="match_parent">
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbarLayout"
@@ -21,15 +16,30 @@
             android:layout_height="300dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed" />
+            android:visibility="visible"
+            app:layout_scrollFlags="scroll" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardRecyclerView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#FFFF00"
             android:gravity="center"
-            android:text="我是ToolBar"
-            android:textSize="20sp"/>
+            android:text="分类二"
+            android:textSize="20sp"
+            app:layout_scrollFlags="scroll" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cardRecyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -37,5 +47,23 @@
             android:layout_height="50dp" />
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FF0000"
+        android:gravity="center"
+        android:text="Title"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_anchor="@id/appbarLayout"
+        app:layout_anchorGravity="bottom"
+        app:layout_behavior=".nestedScrolling.behavior.BottomBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
