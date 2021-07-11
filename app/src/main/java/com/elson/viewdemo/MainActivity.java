@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.elson.viewdemo.customview.ViewGroupActivity;
 import com.elson.viewdemo.nestedScrolling.AppBarLayoutActivity;
 import com.elson.viewdemo.nestedScrolling.RecyclerViewBottomBehaviorActivity;
 import com.elson.viewdemo.nestedScrolling.StickyLayoutActivity;
@@ -47,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         pageData.add(new PageData("Nested SuspendedLayout", SuspendedLayoutActivity.class));
         pageData.add(new PageData("Nested Sticky", StickyLayoutActivity.class));
         pageData.add(new PageData("Nested BottomBehavior", RecyclerViewBottomBehaviorActivity.class));
+        pageData.add(new PageData("View ViewGroup", ViewGroupActivity.class));
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         PageAdapter pageAdapter = new PageAdapter(pageData);
         recyclerView.setAdapter(pageAdapter);
-//        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
         pageAdapter.notifyDataSetChanged();
     }
 
