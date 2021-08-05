@@ -62,8 +62,6 @@
         android:text="Title"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
-        app:layout_anchor="@id/appbarLayout"
-        app:layout_anchorGravity="bottom"
         app:layout_behavior=".nestedScrolling.behavior.BottomBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

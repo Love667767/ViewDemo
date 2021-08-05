@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.appbar.AppBarLayout;
 
@@ -15,7 +16,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
  * @date 2021/7/7
  * @Desc
  */
-public class BottomBehavior extends CoordinatorLayout.Behavior<View> {
+public class BottomBehavior extends CoordinatorLayout.Behavior<TextView> {
 
     private static final String TAG = BottomBehavior.class.getSimpleName();
 
@@ -26,12 +27,12 @@ public class BottomBehavior extends CoordinatorLayout.Behavior<View> {
     }
 
     @Override
-    public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
+    public boolean layoutDependsOn(@NonNull CoordinatorLayout parent, @NonNull TextView child, @NonNull View dependency) {
         return dependency instanceof AppBarLayout;
     }
 
     @Override
-    public boolean onLayoutChild(@NonNull CoordinatorLayout parent, @NonNull View child, int layoutDirection) {
+    public boolean onLayoutChild(@NonNull CoordinatorLayout parent, @NonNull TextView child, int layoutDirection) {
         CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) child.getLayoutParams();
         if (layoutParams != null && layoutParams.height != 0) {
             mBottomHeight = layoutParams.height;
@@ -43,7 +44,7 @@ public class BottomBehavior extends CoordinatorLayout.Behavior<View> {
 
 
     @Override
-    public boolean onDependentViewChanged(@NonNull CoordinatorLayout parent, @NonNull View child, @NonNull View dependency) {
+    public boolean onDependentViewChanged(@NonNull CoordinatorLayout parent, @NonNull TextView child, @NonNull View dependency) {
         //计算出AppBarLayout移动的距离
         int top = dependency.getTop();
         Log.e(TAG, "AppBarLayout移动的距离" + top);
